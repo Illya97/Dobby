@@ -1,3 +1,15 @@
-import { Routes } from '@angular/router';
+import { Route } from '@angular/router';
 
-export const routes: Routes = [];
+export const routes: Route[] = [
+  {
+    path: '',
+    loadChildren: () =>
+      import('./auth/component/register/register.routes').then(
+        (mod) => mod.registerRoutes
+      )
+  },
+  {
+    path: '**',
+    redirectTo: ''
+  }
+];

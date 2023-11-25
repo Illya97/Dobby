@@ -2,10 +2,18 @@
   "bracketSameLine": false,
   "bracketSpacing": true,
   "singleQuote": true,
+  "overrides": [
+    {
+      "files": ["**/*.css", "**/*.scss", "**/*.html"],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ],
   "trailingComma": "none",
   "endOfLine": "auto",
   "tabWidth": 2,
-  "printWidth": 120,
+  "printWidth": 80,
   "useTabs": false,
   "semi": true,
   "quoteProps": "preserve"
