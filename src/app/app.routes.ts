@@ -1,12 +1,18 @@
 import { Route } from '@angular/router';
-import { AuthService } from './auth/service/auth.service';
 
 export const routes: Route[] = [
   {
-    path: '',
+    path: 'register',
     loadChildren: () =>
       import('./auth/component/register/register.routes').then(
         (mod) => mod.registerRoutes
+      )
+  },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./auth/component/login/login.routes').then(
+        (mod) => mod.loginRoutes
       )
   },
   {
